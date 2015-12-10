@@ -118,6 +118,7 @@ gulp.task('cert:fetch', ['cert:fetch:' + CURRENT_OS]);
 gulp.task('build', ['clean:opt', 'clean:artefacts'], function (done) {
   fs.mkdirSync(ARTEFACTS_DIR);
   var builder = new Builder({
+    appName:    'Gitter',
     buildDir:   OUTPUT_DIR,
     version:    manifest.nwversion,
     files:      [path.join(SOURCE_DIR, '**')],
